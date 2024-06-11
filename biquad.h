@@ -1,6 +1,10 @@
 #ifndef __BIQUAD_H_
 #define __BIQUAD_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "rb.h"
 
 /******************************************/
@@ -30,5 +34,9 @@ void BQ_setDen(biquad_t *B, float y1, float y2);
 /* push sampleIn to input_delay, return biquad output and push 
    output onto output_delay ring buffer */
 float BQ_process(biquad_t *B, float sampleIn);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

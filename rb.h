@@ -1,6 +1,10 @@
 #ifndef __RB_H_
 #define __RB_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /******************************************/
 /*             Data Structures            */
 /******************************************/
@@ -41,5 +45,9 @@ float RB3_innerProduct(rb3_t *A, rb3_t *B);
 
 /* print debugger helper */
 void RB3_print(rb3_t *rb);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
